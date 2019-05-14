@@ -21,11 +21,15 @@ namespace CB_Choice
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < SList.Length; i++)
+            for (int i = 0; i <this.SList.Length; i++)
             {
                 this.cbList.Items.Add(SList[i]);
             }
-            orgStr = this.lblResult.Text;
+            if(cbList.Items.Count > 0) {
+            this.cbList.SelectedIndex = 0;
+            }
+            this.orgStr = lblResult.Text;
+ 
 
         }
 
